@@ -1,8 +1,8 @@
-# Ansible Labs
+# Ansible
 
 Estos son los laboratorios para aprender Ansible.
 
-## How to use these Labs
+## Como empezar?
 
 1. Oracle Virtual Box: https://www.virtualbox.org/
 
