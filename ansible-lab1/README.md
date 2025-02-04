@@ -1,43 +1,49 @@
 # Ansible Lab 1 - Installation and Inventory file basics
 
-1. Create VMs using vagrant and ssh to our control server
-2. Copy /vagrant/hosts_file to /etc/hosts 
-3. Install ansible
-4. Create an inventory file named hosts
-5. Test out a command
-6. Generate SSH Keys and copy to hosts
-7. Test running ad-hoc commands to all hosts
-8. Install python-simplejson module. This allows clients to be fully managed.
+1. Crear las maquinas usando vagrant y hacer ssh a nuestra torre de control.
+2. Copiar /vagrant/hosts_file a /etc/hosts
+3. Instalamos ansible
+4. Creamos un archivo inventory y lo llamamos hosts
+5. Probamos
+6. Generamos SSH Keys y las copiamos a los hosts
+7. Probamos la configuracion corriendo comandos usando los hosts
+8. Instalamos python-simplejson. Esto permite que los clientes sean administrados completamente.
 
-### Setup Vagrant and connect to ansible-control server
-``` shell
+### Crear las maquinas usando vagrant y hacer ssh a nuestra torre de control.
+
+```shell
  vagrant up
  vagrant ssh ansible-control
 ```
 
-### Copy hosts file on ansible-control
-``` shell
-cp /vagrant/hosts_file /etc/hosts 
+### Copiar /vagrant/hosts_file a /etc/hosts
+
+```shell
+cp /vagrant/hosts_file /etc/hosts
 ```
 
-### Install Ansible
-``` shell
+### Creamos un archivo inventory y lo llamamos hosts
+
+```shell
  sudo apt-get install ansible
 ```
 
-### Create a SSH key and copy to all servers
-``` shell
+### Generamos SSH Keys y las copiamos a los hosts
+
+```shell
 ssh-keygen
 ssh-copy-id localhost
 ssh-copy-id web01 && ssh-copy-id web02 && ssh-copy-id loadbalancer && ssh-copy-id db01
 ```
 
-### Run a ad-hoc command to the webstack group
-``` shell
+### Probamos la configuracion corriendo comandos usando los hosts
+
+```shell
 ansible webstack -i hosts -m command -a hostname
 ```
 
-### Install python-simplejson
-``` shell
+### Instalamos python-simplejson
+
+```shell
 ansible all -i hosts -m command -a 'sudo apt-get -y install python-simplejson'
 ```
