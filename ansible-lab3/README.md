@@ -1,16 +1,18 @@
-# Ansible Lab 3 - Playbooks and Templates
+# Laboratorio de Ansible 3 - Playbooks y Planillas
 
-1. Create playbook and look over the details of the YAML file
-2. Create Templates
-3. Run the playbook
-4. Test connectivity to server
+1. Revisamos los detalles del archivo YAML en uno ya creado.
+2. Creamos una planilla(template)
+3. Corremos el playbook
+4. Probamos
 
-### Run playbook
-``` shell
+### Corramos el playbook ya existente para analizar los detalles.
+
+```shell
 ansible-playbook -i hosts -K playbook1.yml
 ```
 
-### Test Connectivity to server
-``` shell
+### Probamos conexion.
+
+```shell
 curl web01:8000
 ```

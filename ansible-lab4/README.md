@@ -1,9 +1,9 @@
-# Ansible Lab 4 - Re-usable playbooks - including and importing
+# Laboratorio de Ansible 4 - Reusamos playbooks - include/import
 
-1. Move tasks to a tasks subfolder
-2. Move handler to handler subfolder
-3. Run the playbook
+1. Movemos un task a un subfolder de tasks.
+2. Movemos un handler a un subfolder de handlers
+3. Ejecutamos el playbook
 
-``` shell
+```shell
 ansible-playbook -i hosts -K playbook1.yml
 ```
