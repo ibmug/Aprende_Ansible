@@ -1,14 +1,14 @@
-# Ansible Lab 8 - Create a Developement/Production inventory file
+# Laboratorio de Ansible 8 - Crear un archivo para Development/Production
 
-You can have multiple sets of inventories. Let's create a production and developement inventory file and set a variable for them.
+Uno puede tener distintos sets de inventarios. Hagamos uno para produccion y uno para development y darles variables.
 
-## Gather ansible facts, these are dynamic variables automatically gathered by ansible
-1. Create inventories directory.
-2. Create an inventory file for dev and production.
-3. Set a enviornement variable and run the playbook.
+## Reunamos los detalles de ansible, estos son variables dynamicas que se reunen automaticamente con ansible.
 
+1. Creamos el directorio de inventario.
+2. Creamos un archivo de inventario para dev y para prod.
+3. Fijamos una varaible de ambiente y ejecutamos el playbook.
 
-``` shell
+```shell
 ansible-playbook -i inventories/dev -K playbook1.yml
 ansible-playbook -i inventories/prod -K playbook1.yml
 ```

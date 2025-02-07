@@ -1,16 +1,16 @@
-# Ansible Lab 9 - Add the Database Server
+# Laboratorio de Ansible 9 - Agregar el servidor de base de datos.
 
-We've learned a lot so far. Let's see if we can add the mysql role and get a database up and running.
+Hemos aprendido mucho hasta ahora, pongamos todo eso en practica para agregar un rol de mysql y levantar una base de datos.
 
-## Setup mysql-server on the Database Server
-1. Add python-pip to common installation items.
-2. Create mysql role using ansible-galaxy.
-3. Create tasks and handlers for new mysql role.
-5. Run playbook
-6. Test a mysql connection to database
+## Configuremos mysql-server en el servidor de BdD.
 
+1. Agreguemos python-pip a los items comunes de instalacion.
+2. Creamos el rol de mysql usando ansible-galaxy.
+3. Creamos una tarea y sus handles para el rol de mysql.
+4. Ejecutamos el playbook.
+5. Probamos una conexion sql a la base de datos.
 
-``` shell
+```shell
 ansible-galaxy init roles/mysql
 ansible-playbook -i inventories/prod -K playbook1.yml --tags database
 ssh db01

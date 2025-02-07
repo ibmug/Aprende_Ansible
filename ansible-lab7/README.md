@@ -1,15 +1,15 @@
-# Ansible Lab 7 - Ansible Variables
+# Laboratorio de Ansible 7 - Variables
 
-Two types of variables. User set and "ansible facts".
+Existen dos tipos de variables. Las definidas por usuario y 'ansible facts'
 
-## Gather ansible facts, these are dynamic variables automatically gathered by ansible
-1. Use setup module to gather facts about a system.
-2. View the output and discovery any useful information
-3. Use {{ ansible_facts['nodename'] }} for the nodename variable for the local host. Add this to the index.html file.
-4. Use a loop to dynamically access the nodename of the two webservers. add this to the mysite configuration of nginx proxy server.
+## Reunamos los ansible facts, estos son variables dinamicas que se reunen automaticamente por Ansible.
 
+1. Usamos el modulo de setup para reunir estos detalles del sistema.
+2. Observamos el resultado y descubrimos informacion util.
+3. Usamos {{ ansible_facts['nodename'] }} para la variable de localhost 'nodename'. Agregamos esto al index.html.
+4. Usamos un loop para accesar dinamicamente el nombre del nodo de los dos webservers. Agregamos esto a la configuracion de mysite del servidor proxy nginx.
 
-``` shell
+```shell
 ansible -i hosts proxy -m setup >> ansible_facts.json
 {{ ansible_facts['nodename'] }}
 
@@ -18,7 +18,8 @@ ansible -i hosts proxy -m setup >> ansible_facts.json
     {% endfor %}
 ```
 
-## Move user defined variables to a different location
-1. Move your current variables into the group_vars/all variables
-2. Add these variables to your nginx mysite configuration
-3. Create host_vars folder and make a unique variable for web01
+## Movemos las variables definidas por el usuario a una locacion distinta.
+
+1. Movemos nuestras variables actuales a group_vars/all variables.
+2. Agregamos estas variables a la configuracion de mysite de nginx.
+3. Creamos el folder host_vars y lo hacemos una variable unica para web01.
