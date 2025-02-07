@@ -1,4 +1,4 @@
-# Ansible Lab 1 - Installation and Inventory file basics
+# Ansible Lab 1 - Instalacion y basicos de los archivos de inventario.
 
 1. Crear las maquinas usando vagrant y hacer ssh a nuestra torre de control.
 2. Copiar /vagrant/hosts_file a /etc/hosts
